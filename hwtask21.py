@@ -1,5 +1,5 @@
 import random
-def game (candy_left) -> str:
+def game ():
     print ('There are 117 candies on the table.'
     'You and your opponent can take up to 28 candies in their turn.' 
     'Whose turn is first is decided randomly.'
@@ -12,6 +12,7 @@ def game (candy_left) -> str:
     elif first == 1:
         winner = True
         print ('Player B starts')
+    candy_left = 117
     while candy_left > 0:
         print ('')
         print (f'Candy left: {candy_left}')
@@ -26,13 +27,12 @@ def game (candy_left) -> str:
         elif winner == False:
             winner = True
     if winner == True:
-        return 'Player A has won'
-    else:
-        return 'Player B has won'
+        result = 'Player A has won'
+    else: result = 'Player B has won'
+    return result
 
-print (game (117))
 
-def game_vs_bot (candy_left) -> str:
+def game_vs_bot ():
     print ('There are 117 candies on the table.'
     'You and computer can take up to 28 candies in their turn.' 
     'Whose turn is first is decided randomly.'
@@ -45,6 +45,7 @@ def game_vs_bot (candy_left) -> str:
     elif first == 1:
         winner = True
         print ('Computer starts')
+    candy_left = 117    
     while candy_left > 0:
         print ('')
         print (f'Candy left: {candy_left}')
@@ -65,7 +66,6 @@ def game_vs_bot (candy_left) -> str:
         elif winner == False:
             winner = True
     if winner == True:
-        return 'Player A has won'
-    else:
-        return 'Computer has won'
-print (game_vs_bot(117))
+        result = 'Player A has won'
+    else: result = 'Computer has won'
+    return result
