@@ -1,13 +1,21 @@
-from logger import get_data as gd
-from logger import log_contact as lg
-from model import search_contact as sc
-from model import view_search_res as vsr
-from view import choose_mode as cm
+from logger import *
+from model import *
+from view import *
 
 def run_book ():
-    mode = cm ()
-    if mode == 0:
-        lg(gd())
-    else: vsr (sc())
+    while True:
+        mode = choose_mode ()
+        if mode < 4:
+            if mode == 0:
+                show_all_contacts ()
+            elif mode == 1:
+                log_contact(get_data())
+            elif mode == 2:
+                view_search_res (search_contact())
+            elif mode == 3:
+                delete_employee ()
+        elif mode == 4:
+            exit()
+    
 
 
