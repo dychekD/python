@@ -1,7 +1,7 @@
 import telebot
 import random
 
-bot = telebot.TeleBot("Token")
+bot = telebot.TeleBot("enter token")
 
 @bot.message_handler(commands=['rules'])
 def send_welcome(message):
